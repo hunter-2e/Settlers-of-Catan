@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0cba275bd2416429c605475d69de52, type: 3}
+  m_Name: HexagonalMapConfig
+  m_EditorClassIdentifier: 
+  totalRings: 1
+  hexFields:
+  - {fileID: 3611133580171018861, guid: 17d4251f8f18dd447acfb4b3a41ba3d1, type: 3}
+  - {fileID: 1641546312164055402, guid: 14c80ea9d88eb46458375e27448ec647, type: 3}
+  - {fileID: 3727569671467065021, guid: a5b6a3c83542c3a4a818f8236a54f122, type: 3}
+  - {fileID: 3841973710887344407, guid: c2fce7954f8622d43ace69fbaae8c63a, type: 3}
+  - {fileID: 1338518070209822605, guid: 2cbb2f9609d1dbf4f99ffc9b9b6eeee7, type: 3}
+  - {fileID: 3727569671467065021, guid: a5b6a3c83542c3a4a818f8236a54f122, type: 3}
+  numberFields: 020000000300000004000000050000000600000008000000
