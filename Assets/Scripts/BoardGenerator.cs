@@ -156,7 +156,7 @@ public class BoardGenerator : MonoBehaviour {
 
 
     private void GetTilesSixSides(GameObject tile) {
-        /*
+        
         TileGeometryTracker tileCornerTracker = tile.GetComponent<TileGeometryTracker>();
 
         if (tileCornerTracker != null) {
@@ -171,12 +171,13 @@ public class BoardGenerator : MonoBehaviour {
                 // Calculate position for road setter (in the middle between corners)
                 Vector3 roadSetterPos = (cornerA.transform.position + cornerB.transform.position) / 2f;
 
-                // Round the roadSetterPos vector to the nearest multiple of 10
+                // Round the roadSetterPos vector to a smaller precision
                 roadSetterPos = new Vector3(
-                    Mathf.Round(roadSetterPos.x / 10f) * 10f,
-                    Mathf.Round(roadSetterPos.y / 10f) * 10f,
-                    Mathf.Round(roadSetterPos.z / 10f) * 10f
+                    Mathf.Round(roadSetterPos.x * 100f) / 100f,
+                    Mathf.Round(roadSetterPos.y * 100f) / 100f,
+                    Mathf.Round(roadSetterPos.z * 100f) / 100f
                 );
+
 
                 if (roadPorts.ContainsKey(roadSetterPos)) {
                     AssignRoadToTile(tile, roadPorts[roadSetterPos]);
@@ -200,7 +201,7 @@ public class BoardGenerator : MonoBehaviour {
         } else {
             Debug.LogWarning("Problem during map generation: no tile corner tracker found on tile");
         }
-        */
+        
     }
 
 

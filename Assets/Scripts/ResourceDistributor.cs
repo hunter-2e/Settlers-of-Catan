@@ -12,11 +12,23 @@ public class ResourceDistributor : MonoBehaviour {
 
             foreach (GameObject corner in tileGeometryTracker.tileCorner) {
                 Settlement settlement = corner.GetComponentInChildren<Settlement>();
+                City city = corner.GetComponentInChildren<City>();
                 if (settlement != null) {
                     if (numberTile[rolledNumber].TryGetComponent(out Resource resource)) {
                         // Pass the type of resource instead of the resource object
                         Debug.Log("HAPPENING");
                         Bank.instance.LoseCard(resource.GetType());
+                        settlement.playerCardHub.ReceiveCard(resource.GetType());
+                    }
+                }
+                if(city != null) {
+                    if (numberTile[rolledNumber].TryGetComponent(out Resource resource)) {
+                        // Pass the type of resource instead of the resource object
+                        Debug.Log("HAPPENING");
+                        Bank.instance.LoseCard(resource.GetType());
+                        Bank.instance.LoseCard(resource.GetType());
+
+                        settlement.playerCardHub.ReceiveCard(resource.GetType());
                         settlement.playerCardHub.ReceiveCard(resource.GetType());
                     }
                 }
