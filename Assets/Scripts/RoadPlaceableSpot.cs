@@ -3,8 +3,16 @@ using UnityEngine;
 public class RoadPlaceableSpot : PlaceableSpot {
 
     public override void OnMouseEnter() {
-        base.OnMouseEnter();
+        if (TurnManager.instance.currentBuildMode == TurnManager.BuildMode.RoadMode) {
+            PlaceObject();
+        }
         Debug.Log("ENTERING ROUD SPOT");
+    }
+
+    public override void OnMouseDown() {
+        if(TurnManager.instance.currentBuildMode == TurnManager.BuildMode.RoadMode) {
+            ConfirmPlacement();
+        }
     }
 
     public override void PlaceObject() {
@@ -41,10 +49,12 @@ public class RoadPlaceableSpot : PlaceableSpot {
                         spotTaken = true;
                         spotPlaceable = false;
 
-                        if (TurnManager.instance.currentPlayerTurn.startingRoads < 1) {
+                        if (TurnManager.instance.currentPlayerTurn.startingRoads == 0) {
                             Bank.instance.BuyRoad();
+                            TurnManager.instance.RollingMode();
                         } else {
                             TurnManager.instance.currentPlayerTurn.startingRoads--;
+                            TurnManager.instance.IdleMode();
                         }
                     }
                 }

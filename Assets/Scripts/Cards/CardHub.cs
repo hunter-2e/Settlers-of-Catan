@@ -45,8 +45,6 @@ public class CardHub : MonoBehaviour
         sheepCount.text = resourceAndAmount[typeof(Sheep)].ToString();
         wheatCount.text = resourceAndAmount[typeof(Wheat)].ToString();
         stoneCount.text = resourceAndAmount[typeof(Stone)].ToString();
-
-        Debug.Log(resourceAndAmount[typeof(Wood)]);
     }
 
     public void ToggleCards() {
@@ -63,8 +61,6 @@ public class CardHub : MonoBehaviour
         resourceAndAmount[resource] += 1;
         UpdateCardAmounts();
         ToggleCards();
-
-        Debug.Log("Recieved " + resource);
     }
     public void ReceiveCard(List<Type> resources) {
         foreach(Type resource in resources) {

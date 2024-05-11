@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
+    public DiceRoller diceRoller;
     public static TurnManager instance;
     List<PlayerHub> playerHubs = new List<PlayerHub>();
 
     public PlayerHub currentPlayerTurn = null;
     private int currentPlayerIndex = 0;
+    public BuildMode currentBuildMode = BuildMode.Rolling;
+
+    public enum BuildMode{ 
+        CityMode,
+        SettleMode,
+        RoadMode,
+        Rolling,
+        Idle
+    };
 
     void Start() {
         instance = this;
@@ -41,6 +51,19 @@ public class TurnManager : MonoBehaviour {
     private void GivePlayerTurn(PlayerHub playerHub) {
         currentPlayerTurn = playerHub;
         DisableOtherPlayersTurns();
+
+        if(currentPlayerTurn.startingSettlements > 0) {
+            diceRoller.DisableDieRoll();
+            MakePlayerPlaceSettlementAndRoad();
+        } else {
+            DisableEndTurn();
+            RollingMode();
+        }
+    }
+
+    private void MakePlayerPlaceSettlementAndRoad() {
+        DisableEndTurn();
+        SettlementBuildMode();
     }
 
     // Elaborate on for photon view
@@ -53,4 +76,29 @@ public class TurnManager : MonoBehaviour {
             }
         }
     }
+    private void DisableEndTurn() {
+        currentPlayerTurn.endTurnButton.interactable = false;
+    }
+    public void EnableEndTurn() {
+        currentPlayerTurn.endTurnButton.interactable = true;
+    }
+
+    public void SettlementBuildMode() {
+        currentBuildMode = BuildMode.SettleMode;
+    }
+    public void CityBuildMode() {
+        currentBuildMode = BuildMode.CityMode;
+    }
+    public void RoadBuildMode() {
+        currentBuildMode = BuildMode.RoadMode;
+    }
+    public void RollingMode() {
+        currentBuildMode = BuildMode.Rolling;
+        DiceRoller.instance.EnableDieRoll();
+    }
+    public void IdleMode() {
+        currentBuildMode = BuildMode.Idle;
+        TurnManager.instance.EnableEndTurn();
+    }
+
 }

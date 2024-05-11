@@ -389,7 +389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8194287708939498354}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: CityBuildMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6373843770054324288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1860648987473620512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: RoadBuildMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6909116053150363554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1226,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3124817896149352190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: SettlementBuildMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4756745304047765288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,11 +1313,11 @@ MonoBehaviour:
   sheepButton: {fileID: 0}
   wheatButton: {fileID: 0}
   stoneButton: {fileID: 0}
-  startingSettlements: 1
-  startingRoads: 1
-  settlement: {fileID: 6260887320544709245, guid: e23d5796567b1034eb7fd9ac0b958873, type: 3}
-  city: {fileID: 4533732679434827738, guid: e8b031867a706024c8b1dfbe98f42deb, type: 3}
-  road: {fileID: 3564110622308650264, guid: eb4b737906b32944d9b3012ce4911693, type: 3}
+  startingSettlements: 2
+  startingRoads: 2
+  settlement: {fileID: 6260887320544709245, guid: ad17898cc7d9b7045ab8fa5004eafc38, type: 3}
+  city: {fileID: 4533732679434827738, guid: 6e7aca3298199394bb0f3e7227afc201, type: 3}
+  road: {fileID: 3564110622308650264, guid: f6b897c74a3055447a64e3cd1e9e4838, type: 3}
 --- !u!1 &7358490828717720815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1438,6 @@ GameObject:
   - component: {fileID: 5820976981454711968}
   - component: {fileID: 3775008585401017995}
   - component: {fileID: 3128572382145199570}
-  - component: {fileID: 1016411255619419967}
   m_Layer: 5
   m_Name: Dev Button
   m_TagString: Untagged
@@ -1513,23 +1548,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &3128572382145199570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8387793370181835120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35339a8ea48107459f663db31ded19f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodNeeded: 0
-  stoneNeeded: 1
-  brickNeeded: 0
-  wheatNeeded: 1
-  sheepNeeded: 1
---- !u!114 &1016411255619419967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

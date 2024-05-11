@@ -23,7 +23,9 @@ public class PlaceableSpot : MonoBehaviour {
 
     public virtual void OnMouseEnter() {
         // Place the object when mouse enters the collider
-        PlaceObject();
+        if(TurnManager.instance.currentBuildMode == TurnManager.BuildMode.SettleMode) {
+            PlaceObject();
+        }
     }
 
     void OnMouseExit() {
@@ -31,9 +33,11 @@ public class PlaceableSpot : MonoBehaviour {
         RemoveObject();
     }
 
-    void OnMouseDown() {
+    public virtual void OnMouseDown() {
         // Confirm the location when mouse clicks
-        ConfirmPlacement();
+        if (TurnManager.instance.currentBuildMode == TurnManager.BuildMode.SettleMode) {
+            ConfirmPlacement();
+        }
     }
 
     public virtual void PlaceObject() {
@@ -120,10 +124,12 @@ public class PlaceableSpot : MonoBehaviour {
                     }
                 }
             }
-        if (TurnManager.instance.currentPlayerTurn.startingSettlements < 1) {
+        if (TurnManager.instance.currentPlayerTurn.startingSettlements == 0) {
             Bank.instance.BuySettlement();
+            TurnManager.instance.RollingMode();
         } else {
             TurnManager.instance.currentPlayerTurn.startingSettlements--;
+            TurnManager.instance.RoadBuildMode();
         }
         }
     }

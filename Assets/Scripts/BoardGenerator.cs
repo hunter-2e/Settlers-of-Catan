@@ -4,6 +4,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(Grid))]
 public class BoardGenerator : MonoBehaviour {
+    public static BoardGenerator instance;
+
     private GameObject cornerHolder, edgeHolder, tileHolder;
     private Grid grid;
     public GameObject cornerSetter, roadSetter;
@@ -37,6 +39,8 @@ public class BoardGenerator : MonoBehaviour {
     private ResourceDistributor resourceDistributor;
 
     void Start() {
+        instance = this;
+
         GameObject tilesFolder = new GameObject("Tiles");
         tileHolder = new GameObject("Tiles Holder");
         cornerHolder = new GameObject("Corner Holder");
@@ -48,6 +52,20 @@ public class BoardGenerator : MonoBehaviour {
 
         grid = GetComponent<Grid>();
         CreateRings();
+    }
+
+    public void DisableRoadPlacement() {
+        edgeHolder.SetActive(false);
+    }
+    public void DisableSettlePlacement() {
+        cornerHolder.SetActive(false);
+    }
+    public void EnableRoadPlacement() {
+        edgeHolder.SetActive(true);
+
+    }
+    public void EnableSettlePlacement() {
+        cornerHolder.SetActive(true);
     }
 
     private void CreateRings() {

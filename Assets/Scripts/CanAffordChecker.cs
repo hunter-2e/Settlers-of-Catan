@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(Button))]
 public class CanAffordChecker : MonoBehaviour {
     [SerializeField]
@@ -16,36 +17,23 @@ public class CanAffordChecker : MonoBehaviour {
     }
 
     public void UpdateAffordAbility() {
+        if(button == null) {
+            button = GetComponent<Button>();
+        }
         int woodOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Wood)];
         int wheatOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Wheat)];
         int stoneOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Stone)];
         int brickOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Brick)];
         int sheepOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Sheep)];
-        canAfford = true;
 
-        if (woodOwned < woodNeeded) {
-            canAfford = false;
-            Debug.Log("You need " + (woodNeeded - woodOwned) + " more wood.");
-        }
+        canAfford = false;
+        if(gameObject.name == "City Button") {
+            Debug.Log("Sheep needed: " + sheepNeeded);
+            Debug.Log("Sheep owned: " + sheepOwned);
 
-        if (stoneOwned < stoneNeeded) {
-
-        if (wheatOwned < wheatNeeded) {
-            canAfford = false;
-            Debug.Log("You need " + (wheatNeeded - wheatOwned) + " more wheat.");
-        }
-            canAfford = false;
-            Debug.Log("You need " + (stoneNeeded - stoneOwned) + " more stone.");
-        }
-
-        if (brickOwned < brickNeeded) {
-            canAfford = false;
-            Debug.Log("You need " + (brickNeeded - brickOwned) + " more brick.");
-        }
-
-        if (sheepOwned < sheepNeeded) {
-            canAfford = false;
-            Debug.Log("You need " + (sheepNeeded - sheepOwned) + " more sheep.");
+            if(wheatOwned >= wheatNeeded && stoneOwned >= stoneNeeded && sheepOwned >= sheepNeeded && brickOwned >= brickNeeded && woodOwned >= woodNeeded) {
+                canAfford = true;
+            }
         }
 
         button.interactable = canAfford;
