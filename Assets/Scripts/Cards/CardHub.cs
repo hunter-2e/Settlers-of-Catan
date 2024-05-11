@@ -66,24 +66,27 @@ public class CardHub : MonoBehaviour
         UpdateCardAmounts();
         ToggleCards();
     }
+
     public void ReceiveCard(List<Type> resources) {
         foreach(Type resource in resources) {
             ReceiveCard(resource);
         }
     }
+
     public void LoseCard(Type resource) {
         resourceAndAmount[resource] -= 1;
         UpdateCardAmounts();
         ToggleCards();
     }
 
-    public int GetResourceAmount(Type resource) {
-        return resourceAndAmount[resource];
-    }
     public void LoseCard(List<Type> resources) {
-        foreach(Type resource in resources) {
+        foreach (Type resource in resources) {
             LoseCard(resource);
         }
+    }
+
+    public int GetResourceAmount(Type resource) {
+        return resourceAndAmount[resource];
     }
 
 }

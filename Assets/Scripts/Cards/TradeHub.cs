@@ -47,6 +47,16 @@ public class TradeHub : MonoBehaviour
      * Enables or Disables the trade window.
      */
     public void ToggleTradeWindow() {
+        // Can't trade until rolled dice
+        if (TurnManager.instance.currentBuildMode != TurnManager.BuildMode.Idle)
+            return;
+
+        // If going to disable, move cards back to player's hand
+        if (tradeBox.activeSelf) {
+            MoveAllResources(givingCards, playerCards);
+            MoveAllResources(takingCards, null);
+        }
+
         playerTradeButton.gameObject.SetActive(!playerTradeButton.gameObject.activeSelf);
         bankTradeButton.gameObject.SetActive(!bankTradeButton.gameObject.activeSelf);
         tradeBox.SetActive(!tradeBox.activeSelf);
@@ -71,9 +81,25 @@ public class TradeHub : MonoBehaviour
     }
 
     /*
+     * Move all cards from one card hub to another.
+     */
+    public void MoveAllResources(CardHub fromHub, CardHub toHub) {
+        if (!tradeBox.activeSelf)
+            return;
+
+        foreach (Type resource in resources) {
+            int numCards = fromHub.GetResourceAmount(resource);
+
+            for (int i = 0; i < numCards; i++) {
+                MoveResource(resource, fromHub, toHub);
+            }
+        }
+    }
+
+    /*
      * Check if the currently proposed trade is valid as a bank trade.
      * Activate / Deactivate the bank trade button accordingly.
-     */ 
+     */
     private void CheckBankTradeValid() {
         bool isValid = true;
         int numResourcesGiving = 0;

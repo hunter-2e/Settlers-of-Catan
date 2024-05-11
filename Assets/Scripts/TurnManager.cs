@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
+    public GameObject tradeBox;
+    public TradeHub tradeHub;
+
     public DiceRoller diceRoller;
     public static TurnManager instance;
     List<PlayerHub> playerHubs = new List<PlayerHub>();
@@ -36,6 +39,10 @@ public class TurnManager : MonoBehaviour {
     }
 
     public void PassTurn() {
+        // Disable trade window if active
+        if (tradeBox.activeSelf)
+            tradeHub.ToggleTradeWindow();
+
         // Increment the current player index
         currentPlayerIndex++;
 
