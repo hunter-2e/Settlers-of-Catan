@@ -7,7 +7,7 @@ public class CardHub : MonoBehaviour
 {
     public int startingCardAmount;
 
-    private Dictionary<Type, int> resourceAndAmount = new Dictionary<Type, int>();
+    public Dictionary<Type, int> resourceAndAmount = new Dictionary<Type, int>();
     TextMeshProUGUI sheepCount, brickCount, wheatCount, stoneCount, woodCount;
     private void Start() {
         sheepCount = transform.GetComponentInChildren<Sheep>().transform.GetComponentInChildren<TextMeshProUGUI>();
@@ -39,9 +39,19 @@ public class CardHub : MonoBehaviour
         resourceAndAmount[resource] += 1;
         UpdateCardAmounts();
     }
-
+    public void ReceiveCard(List<Type> resources) {
+        foreach(Type resource in resources) {
+            ReceiveCard(resource);
+        }
+    }
     public void LoseCard(Type resource) {
         resourceAndAmount[resource] -= 1;
         UpdateCardAmounts();
     }
+    public void LoseCard(List<Type> resources) {
+        foreach(Type resource in resources) {
+            LoseCard(resource);
+        }
+    }
+
 }
