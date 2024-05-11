@@ -20,6 +20,14 @@ public class CanAffordChecker : MonoBehaviour {
         if(button == null) {
             button = GetComponent<Button>();
         }
+        if (TurnManager.instance.currentPlayerTurn == null) {
+            Debug.Log("current player null");
+        }else if (TurnManager.instance == null) {
+            Debug.Log("turnmanager null");
+
+        }else if(TurnManager.instance.currentPlayerTurn.resourceAndAmount.Count == 0) {
+            Debug.Log("EMPTY DICT");
+        }
         int woodOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Wood)];
         int wheatOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Wheat)];
         int stoneOwned = TurnManager.instance.currentPlayerTurn.resourceAndAmount[typeof(Stone)];

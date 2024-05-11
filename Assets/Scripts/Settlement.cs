@@ -9,7 +9,7 @@ public class Settlement : MonoBehaviour
     private void Start() {
         PlayerHub[] cardHubs = FindObjectsOfType<PlayerHub>();
 
-        foreach(PlayerHub hub in cardHubs) {
+        foreach (PlayerHub hub in cardHubs) {
             playerCardHub = hub;
         }
     }
