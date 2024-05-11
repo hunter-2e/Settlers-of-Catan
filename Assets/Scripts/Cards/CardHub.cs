@@ -9,7 +9,7 @@ public class CardHub : MonoBehaviour
     public int startingCardAmount;
     public bool showEmpty;
 
-    protected Dictionary<Type, int> resourceAndAmount = new Dictionary<Type, int>();
+    public Dictionary<Type, int> resourceAndAmount = new Dictionary<Type, int>();
 
     protected TextMeshProUGUI woodCount, brickCount, sheepCount, wheatCount, stoneCount;
     private GameObject woodObj, brickObj, sheepObj, wheatObj, stoneObj;
