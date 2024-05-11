@@ -4,15 +4,13 @@ using UnityEngine;
 using System;
 public class Settlement : MonoBehaviour
 {
-    public CardHub playerCardHub;
+    public PlayerHub playerCardHub;
 
     private void Start() {
-        CardHub[] cardHubs = FindObjectsOfType<CardHub>();
+        PlayerHub[] cardHubs = FindObjectsOfType<PlayerHub>();
 
-        foreach(CardHub hub in cardHubs) {
-            if(hub as Bank == false) {
-                playerCardHub = hub;
-            }
+        foreach(PlayerHub hub in cardHubs) {
+            playerCardHub = hub;
         }
     }
 }

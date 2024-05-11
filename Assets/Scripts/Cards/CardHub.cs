@@ -4,6 +4,7 @@ using System;
 using TMPro;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 public class CardHub : MonoBehaviour
 {
     public int startingCardAmount;
@@ -14,6 +15,8 @@ public class CardHub : MonoBehaviour
     protected TextMeshProUGUI woodCount, brickCount, sheepCount, wheatCount, stoneCount;
     private GameObject woodObj, brickObj, sheepObj, wheatObj, stoneObj;
     public Button woodButton, brickButton, sheepButton, wheatButton, stoneButton;
+
+    public int woodAmount;
 
     private void Start() {
         woodObj = transform.GetComponentInChildren<Wood>(true).gameObject;
@@ -41,6 +44,7 @@ public class CardHub : MonoBehaviour
 
     private void UpdateCardAmounts() {
         woodCount.text = resourceAndAmount[typeof(Wood)].ToString();
+        woodAmount = resourceAndAmount[typeof(Wood)];
         brickCount.text = resourceAndAmount[typeof(Brick)].ToString();
         sheepCount.text = resourceAndAmount[typeof(Sheep)].ToString();
         wheatCount.text = resourceAndAmount[typeof(Wheat)].ToString();
@@ -59,7 +63,7 @@ public class CardHub : MonoBehaviour
         }
     }
 
-    public void ReceiveCard(Type resource) {
+    public void ReceiveCard(Type resource) { 
         resourceAndAmount[resource] += 1;
         UpdateCardAmounts();
         ToggleCards();

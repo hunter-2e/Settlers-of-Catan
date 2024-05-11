@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5959792885203393768}
   - component: {fileID: 6390089898727804875}
-  - component: {fileID: 2443484218128754328}
+  - component: {fileID: 3189769924414278110}
   m_Layer: 5
   m_Name: Brick Cards
   m_TagString: Untagged
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6390089898727804875
 MonoBehaviour:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5388cb2d74ce345906a99e83ab1d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2443484218128754328
+--- !u!114 &3189769924414278110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +132,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8599353728286063156
 CanvasRenderer:
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -242,12 +242,12 @@ GameObject:
   - component: {fileID: 7827835423409042288}
   - component: {fileID: 5159081720631024329}
   - component: {fileID: 5891928163890439241}
-  - component: {fileID: 4665195092087909108}
   - component: {fileID: 8959631883243724565}
-  - component: {fileID: 8847475507091675871}
+  - component: {fileID: 5023923037392247650}
+  - component: {fileID: 4494689953341384590}
   m_Layer: 5
-  m_Name: Card Hub
-  m_TagString: Untagged
+  m_Name: Trade Card Hub
+  m_TagString: CardHub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -129}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5159081720631024329
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128308948900204838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -315,25 +315,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4665195092087909108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128308948900204838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1d0fd76a9f7e34ca0275abd7e6262a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingCardAmount: 0
-  showEmpty: 0
-  woodButton: {fileID: 6079204508856806207}
-  brickButton: {fileID: 2443484218128754328}
-  sheepButton: {fileID: 5183533926060422454}
-  wheatButton: {fileID: 3371702284985826852}
-  stoneButton: {fileID: 4331773972990802162}
 --- !u!114 &8959631883243724565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +341,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &8847475507091675871
+--- !u!114 &5023923037392247650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,6 +355,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 1
+--- !u!114 &4494689953341384590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128308948900204838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1d0fd76a9f7e34ca0275abd7e6262a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingCardAmount: 0
+  showEmpty: 0
+  woodButton: {fileID: 8371392318392175528}
+  brickButton: {fileID: 3189769924414278110}
+  sheepButton: {fileID: 5689217128783758026}
+  wheatButton: {fileID: 2343786322854075210}
+  stoneButton: {fileID: 8621017600363454935}
 --- !u!1 &1160945481051113053
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +410,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6788485686909958454
 CanvasRenderer:
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -545,7 +545,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5359820069970470200
 CanvasRenderer:
@@ -621,7 +621,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6979534928112312550
 CanvasRenderer:
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -756,7 +756,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4156443479014512359
 CanvasRenderer:
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -865,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3502854705380091070}
   - component: {fileID: 952724199328024752}
-  - component: {fileID: 4331773972990802162}
+  - component: {fileID: 8621017600363454935}
   m_Layer: 5
   m_Name: Stone Cards
   m_TagString: Untagged
@@ -893,7 +893,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952724199328024752
 MonoBehaviour:
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21cdfa0d341a93b4fb844c6b18a2885b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4331773972990802162
+--- !u!114 &8621017600363454935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -961,7 +961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3595372980690358120}
   - component: {fileID: 5165409094936471293}
-  - component: {fileID: 6079204508856806207}
+  - component: {fileID: 8371392318392175528}
   m_Layer: 5
   m_Name: Wood Cards
   m_TagString: Untagged
@@ -989,7 +989,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5165409094936471293
 MonoBehaviour:
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432cbbc123c9d7d42b0f6106b5806b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6079204508856806207
+--- !u!114 &8371392318392175528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9172312627096128201}
   - component: {fileID: 8506519842859926269}
-  - component: {fileID: 5183533926060422454}
+  - component: {fileID: 5689217128783758026}
   m_Layer: 5
   m_Name: Sheep Cards
   m_TagString: Untagged
@@ -1085,7 +1085,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8506519842859926269
 MonoBehaviour:
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5222219569e90c14fbec67883374c277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5183533926060422454
+--- !u!114 &5689217128783758026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1179,7 +1179,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6908908023005574938
 CanvasRenderer:
@@ -1255,7 +1255,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3719725877543109551
 CanvasRenderer:
@@ -1331,7 +1331,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9181096543235337339
 CanvasRenderer:
@@ -1407,7 +1407,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5554021804631095046
 CanvasRenderer:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1542,7 +1542,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6240370691157031929
 CanvasRenderer:
@@ -1592,7 +1592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7029615283794671560}
   - component: {fileID: 3239255822220712244}
-  - component: {fileID: 3371702284985826852}
+  - component: {fileID: 2343786322854075210}
   m_Layer: 5
   m_Name: Wheat Cards
   m_TagString: Untagged
@@ -1620,7 +1620,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3239255822220712244
 MonoBehaviour:
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d5f725926b83d4f800b49c22864ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3371702284985826852
+--- !u!114 &2343786322854075210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
