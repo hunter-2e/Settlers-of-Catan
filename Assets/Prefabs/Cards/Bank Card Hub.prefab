@@ -195,11 +195,11 @@ GameObject:
   - component: {fileID: 7827835423409042288}
   - component: {fileID: 5159081720631024329}
   - component: {fileID: 5891928163890439241}
-  - component: {fileID: 4665195092087909108}
   - component: {fileID: 8959631883243724565}
+  - component: {fileID: 8471612902422417156}
   m_Layer: 5
   m_Name: Bank Card Hub
-  m_TagString: Untagged
+  m_TagString: CardHub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,19 +266,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4665195092087909108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128308948900204838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1d0fd76a9f7e34ca0275abd7e6262a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingCardAmount: 0
 --- !u!114 &8959631883243724565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +292,25 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8471612902422417156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128308948900204838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984db7e36c35e2e4093dbb1ca40c9d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingCardAmount: 19
+  showEmpty: 0
+  woodButton: {fileID: 0}
+  brickButton: {fileID: 0}
+  sheepButton: {fileID: 0}
+  wheatButton: {fileID: 0}
+  stoneButton: {fileID: 0}
 --- !u!1 &1160945481051113053
 GameObject:
   m_ObjectHideFlags: 0
