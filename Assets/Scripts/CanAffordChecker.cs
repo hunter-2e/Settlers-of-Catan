@@ -28,12 +28,12 @@ public class CanAffordChecker : MonoBehaviour {
             Debug.Log("You need " + (woodNeeded - woodOwned) + " more wood.");
         }
 
+        if (stoneOwned < stoneNeeded) {
+
         if (wheatOwned < wheatNeeded) {
             canAfford = false;
             Debug.Log("You need " + (wheatNeeded - wheatOwned) + " more wheat.");
         }
-
-        if (stoneOwned < stoneNeeded) {
             canAfford = false;
             Debug.Log("You need " + (stoneNeeded - stoneOwned) + " more stone.");
         }
