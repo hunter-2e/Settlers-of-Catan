@@ -1271,11 +1271,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingCardAmount: 0
+  showEmpty: 0
+  woodButton: {fileID: 0}
+  brickButton: {fileID: 0}
+  sheepButton: {fileID: 0}
+  wheatButton: {fileID: 0}
+  stoneButton: {fileID: 0}
   startingSettlements: 1
   startingRoads: 1
-  settlement: {fileID: 6260887320544709245, guid: ad17898cc7d9b7045ab8fa5004eafc38, type: 3}
-  city: {fileID: 4533732679434827738, guid: 6e7aca3298199394bb0f3e7227afc201, type: 3}
-  road: {fileID: 3564110622308650264, guid: f6b897c74a3055447a64e3cd1e9e4838, type: 3}
+  settlement: {fileID: 6260887320544709245, guid: e23d5796567b1034eb7fd9ac0b958873, type: 3}
+  city: {fileID: 4533732679434827738, guid: e8b031867a706024c8b1dfbe98f42deb, type: 3}
+  road: {fileID: 3564110622308650264, guid: eb4b737906b32944d9b3012ce4911693, type: 3}
 --- !u!1 &7358490828717720815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,11 +1320,11 @@ RectTransform:
   - {fileID: 7221355287269186751}
   m_Father: {fileID: 5393214228482742357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 176, y: -490}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 777, y: 0}
   m_SizeDelta: {x: 750, y: 250}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &1627697140585055277
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1396,6 +1402,7 @@ GameObject:
   - component: {fileID: 5820976981454711968}
   - component: {fileID: 3775008585401017995}
   - component: {fileID: 3128572382145199570}
+  - component: {fileID: 1016411255619419967}
   m_Layer: 5
   m_Name: Dev Button
   m_TagString: Untagged
@@ -1522,6 +1529,23 @@ MonoBehaviour:
   brickNeeded: 0
   wheatNeeded: 1
   sheepNeeded: 1
+--- !u!114 &1016411255619419967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387793370181835120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35339a8ea48107459f663db31ded19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodNeeded: 0
+  stoneNeeded: 1
+  brickNeeded: 0
+  wheatNeeded: 1
+  sheepNeeded: 1
 --- !u!1001 &461973210764347118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1604,7 +1628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1612,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1620,7 +1644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1660,11 +1684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -910
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -415
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7827835423409042288, guid: 5b4f2d351dde6cc4b801adf5cb10f388, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
